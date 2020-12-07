@@ -4,12 +4,12 @@
 import unittest
 from selenium import webdriver
 import time
-from TUMI_CN.utils.seleniumtools import new_find_element
-from TUMI_CN.config import host,kefu_url
-from TUMI_CN.PO.tumi_club import huiyuan_zhuanshuliyv
-from TUMI_CN.PO.store_locator import mendianleixing
-from TUMI_CN.PO.cart import empty_gouwuche
-from TUMI_CN.PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
+from utils.seleniumtools import new_find_element
+from config import host,kefu_url
+from PO.tumi_club import huiyuan_zhuanshuliyv
+from PO.store_locator import mendianleixing
+from PO.cart import empty_gouwuche
+from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
     tishi,gouwuche,denglu
 
 class test_homepage(unittest.TestCase):
