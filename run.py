@@ -7,7 +7,9 @@ from utils.ClassicHTMLTestRunner import HTMLTestRunner
 testcase = unittest.defaultTestLoader.discover('case','test_*.py')
 
 #自动运行case并生成报告 htmltestrunner
-filePath = r'C:\huang111\TUMI_CN\report\report.html'
+filePath = r'F:\Tuogo_Project\TUMI\report\report.html'
+#F:\Tuogo_Project\TUMI\report\report.html
+#C:\huang111\TUMI_CN\report\report.html
 title = 'WEB自动化测试报告'
 descr = '这是自动化测试描述'
 

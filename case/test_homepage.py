@@ -15,7 +15,7 @@ from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,z
 class test_homepage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver=webdriver.Chrome(executable_path=r'C:\huang111\TUMI_CN\chromedriver.exe')
+        cls.driver=webdriver.Chrome(executable_path='chromedriver.exe')
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
