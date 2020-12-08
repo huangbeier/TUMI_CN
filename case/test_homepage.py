@@ -5,7 +5,7 @@ import unittest
 from selenium import webdriver
 import time
 from utils.seleniumtools import new_find_element
-from config import host,kefu_url
+from config import host,kefu_url,chromeDriver_Path
 from PO.tumi_club import huiyuan_zhuanshuliyv
 from PO.store_locator import mendianleixing
 from PO.cart import empty_gouwuche
@@ -15,7 +15,7 @@ from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,z
 class test_homepage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver=webdriver.Chrome(executable_path='chromedriver.exe')
+        cls.driver=webdriver.Chrome(executable_path=chromeDriver_Path)
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
@@ -49,6 +49,7 @@ class test_homepage(unittest.TestCase):
         assert new_find_element(self.driver,empty_gouwuche).text == '您的购物车为空。'
     def test_TUMIUAT_408_6(self):
         new_find_element(self.driver,zhuce_denglu).click()
+        time.sleep(1)
         assert new_find_element(self.driver,denglu).text == '登录'
 
 
