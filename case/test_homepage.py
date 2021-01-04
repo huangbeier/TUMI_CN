@@ -5,13 +5,12 @@ import unittest
 from selenium import webdriver
 import time
 from utils.seleniumtools import new_find_element
-from utils.TUMIcn_login import login
 from config import host,kefu_url,chromeDriver_Path
 from PO.tumi_club import huiyuan_zhuanshuliyv
 from PO.store_locator import mendianleixing
 from PO.cart import empty_gouwuche
 from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
-    tishi,gouwuche,denglu,sousuo,sousuo_anniu
+    tishi,gouwuche,sousuo,sousuo_anniu
 from selenium.webdriver import ActionChains  #实现鼠标悬停
 
 class test_homepage_nologin(unittest.TestCase):
@@ -52,7 +51,7 @@ class test_homepage_nologin(unittest.TestCase):
     def test_TUMIUAT_408_6(self):
         new_find_element(self.driver,zhuce_denglu).click()
         time.sleep(2)
-        assert new_find_element(self.driver,denglu).text == '登录'
+        assert self.driver.find_element_by_xpath('//*[@id="tm-panel-login"]/div[2]/h4').text == '还没有TUMI账号?'
     def test_TUMIUAT_410_1(self):
         new_find_element(self.driver,sousuo).send_keys('alp')
         new_find_element(self.driver,sousuo_anniu).click()
