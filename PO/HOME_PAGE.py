@@ -32,5 +32,3 @@ my_account1=('xpath','//*[@id="loggedInDiv"]/a[1]')
 sousuo=('id','search')
 #搜索按钮
 sousuo_anniu=('xpath','//*[@id="top-nav"]/div[5]/div[2]/form/div[1]/button/span')
-#搜索悬浮涂层
-guanjianzi=('xpath','//*[@id="suggested_categories_header"]')

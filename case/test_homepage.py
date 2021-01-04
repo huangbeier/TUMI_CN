@@ -11,7 +11,8 @@ from PO.tumi_club import huiyuan_zhuanshuliyv
 from PO.store_locator import mendianleixing
 from PO.cart import empty_gouwuche
 from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
-    tishi,gouwuche,denglu,jixv_gouwu
+    tishi,gouwuche,denglu,sousuo,sousuo_anniu
+from selenium.webdriver import ActionChains  #实现鼠标悬停
 
 class test_homepage_nologin(unittest.TestCase):
     @classmethod
@@ -52,3 +53,22 @@ class test_homepage_nologin(unittest.TestCase):
         new_find_element(self.driver,zhuce_denglu).click()
         time.sleep(2)
         assert new_find_element(self.driver,denglu).text == '登录'
+    def test_TUMIUAT_410_1(self):
+        new_find_element(self.driver,sousuo).send_keys('alp')
+        new_find_element(self.driver,sousuo_anniu).click()
+        assert self.driver.find_element_by_xpath('//*[@id="productTabContent"]/div[1]/div/div[1]/h1').text == '搜索页'
+    def test_TUMIUAT_411_1(self):
+        new_find_element(self.driver, sousuo).send_keys('alpp')
+        new_find_element(self.driver, sousuo_anniu).click()
+        assert self.driver.find_element_by_xpath('//*[@id="navEnd"]/div[2]/div[1]/div/div[1]').text == '对不起，没有搜索结果'
+    def test_TUMIUAT_412_1(self):
+        new_find_element(self.driver, sousuo).send_keys('alp')
+        ActionChains(self.driver).move_to_element(new_find_element(self.driver,sousuo)).perform()#鼠标悬停到搜索框
+        time.sleep(5)
+        assert self.driver.find_element_by_xpath('//*[@id="suggested_categories"]/span/a').text == 'alpha'
+    def test_TUMIUAT_413_1(self):
+        new_find_element(self.driver, sousuo).send_keys('alp')
+        ActionChains(self.driver).move_to_element(new_find_element(self.driver, sousuo)).perform()  # 鼠标悬停到搜索框
+        time.sleep(5)
+        self.driver.find_element_by_xpath('//*[@id="matching_products"]/li[1]/a/span[2]/span[1]').click()
+        assert self.driver.find_element_by_xpath('//*[@id="prod-details"]/h1').text == 'Lance双肩包'
