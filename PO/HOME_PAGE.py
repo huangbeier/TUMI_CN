@@ -17,5 +17,14 @@ tishi=('xpath','//*[@id="headerBox"]')
 #购物车
 gouwuche=('xpath','//*[@id="minicart_data"]')
 #登录/注册-登录
-denglu=('xpath','//*[@id="login-option-regular"]/input')
-
+denglu=('id','login-option-regular')
+#用户名输入框
+username=('id','j_username')
+#密码
+password=('id','j_password')
+#继续购物
+jixv_gouwu=('xpath','//*[@id="tm-panel-mini-cart"]/div/div[2]/a[2]')
+#关闭登录
+close_login=('xpath','//*[@id="tm-panel-login-confirmation"]/header/a/span')
+#我的账号
+my_account1=('xpath','//*[@id="loggedInDiv"]/a[1]')
