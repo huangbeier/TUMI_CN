@@ -74,14 +74,18 @@ class test_homepage_nologin(unittest.TestCase):
         new_find_element(self.driver,huiyuanjulebu).click()
         assert self.driver.current_url == f'{host}/tumi-club/'
         assert new_find_element(self.driver,huiyuan_zhuanshuliyv).text == '会员专属礼遇'
-    # def test_TUMIUAT_410_1(self):
-    #     new_find_element(self.driver,sousuo).send_keys('alp')
-    #     new_find_element(self.driver,sousuo_anniu).click()
-    #     assert self.driver.find_element_by_xpath('//*[@id="productTabContent"]/div[1]/div/div[1]/h1').text == '搜索页'
-    # def test_TUMIUAT_411_1(self):
-    #     new_find_element(self.driver, sousuo).send_keys('alpp')
-    #     new_find_element(self.driver, sousuo_anniu).click()
-    #     assert self.driver.find_element_by_xpath('//*[@id="navEnd"]/div[2]/div[1]/div/div[1]').text == '对不起，没有搜索结果'
+    def test_TUMIUAT_931(self):
+        self.driver.find_element_by_xpath('//*[@id="top-nav"]/header/div[3]/div[4]/div[4]/div/a/span[1]').click()
+        new_find_element(self.driver,sousuo).send_keys('alp')
+        new_find_element(self.driver,sousuo_anniu).click()
+        time.sleep(1)
+        assert self.driver.find_element_by_css_selector('#productTabContent > div.page-title-compare-cntr > div > div.page-title-breadcrum > h1').text == '搜索页'
+    def test_TUMIUAT_935(self):
+        self.driver.find_element_by_xpath('//*[@id="top-nav"]/header/div[3]/div[4]/div[4]/div/a/span[1]').click()
+        new_find_element(self.driver, sousuo).send_keys('alpp')
+        new_find_element(self.driver, sousuo_anniu).click()
+        time.sleep(1)
+        assert self.driver.find_element_by_xpath('//*[@id="navEnd"]/div[2]/div[2]/div/div[1]').text == '尝试新的搜索'
     # def test_TUMIUAT_412_1(self):
     #     new_find_element(self.driver, sousuo).send_keys('alp')
     #     ActionChains(self.driver).move_to_element(new_find_element(self.driver,sousuo)).perform()#鼠标悬停到搜索框
