@@ -44,3 +44,5 @@ fenlei_xiekuabao=('id','crossbodies')
 fenlei_peijian=('id','accessories')
 #分类-环保产品
 fenlei_recycled=('id','recycled')
+#密码为必填报错
+password_e=('id','j_username-error')
