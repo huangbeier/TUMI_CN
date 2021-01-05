@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>WEB自动化测试报告</title>
+    <title>TUMI_CN_PC</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -326,13 +326,13 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>WEB自动化测试报告</h1>
+<h1>TUMI_CN_PC</h1>
 <p class='attribute'><strong>测试人员:</strong> tester</p>
-<p class='attribute'><strong>开始时间:</strong> 2021-01-04 14:17:36</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:01:47.256182</p>
-<p class='attribute'><strong>测试结果:</strong> 通过 9 失败 2 错误 5</p>
+<p class='attribute'><strong>开始时间:</strong> 2021-01-05 15:00:02</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:03:26.349935</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 14 失败 2</p>
 
-<p class='description'>这是自动化测试描述</p>
+<p class='description'>TUMI_CN_PC</p>
 </div>
 
 
@@ -340,16 +340,16 @@ function showOutput(id, name) {
 <p id='show_detail_line'>
 
 
-<button class="btn btn-primary" onclick="#" type="button" >概要(56.25%)</button>
+<button class="btn btn-primary" onclick="#" type="button" >概要(87.5%)</button>
 
-<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(9)</button>
+<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(14)</button>
 
 <button class="btn btn-danger" onclick="showCase(1)" type="button" >失败(2)</button>
 
 <button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(16)</button>
 
 <!--
-<a href='javascript:showCase(0)'>通过(9)</a>
+<a href='javascript:showCase(0)'>通过(14)</a>
 <a href='javascript:showCase(1)'>失败(2)</a>
 <a href='javascript:showCase(2)'>所有(16)</a>
 
@@ -376,8 +376,8 @@ function showOutput(id, name) {
 <tr class='failClass'>
     <td>test_homepage.test_homepage_nologin</td>
     <td>10</td>
-    <td>9</td>
-    <td>1</td>
+    <td>8</td>
+    <td>2</td>
     <td>0</td>
     <td>
      <!--
@@ -389,19 +389,36 @@ function showOutput(id, name) {
     </td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_TUMIUAT_408_1</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt1.1' class="popup_window">
-      
+<tr id='ft1.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TUMIUAT_408_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        失败</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft1.1')" 
+        type="button" >失败&bull;</button> 
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_homepage.py", line 30, in test_TUMIUAT_408_1
+    assert new_find_element(self.driver,zhuce_denglu).text == '登录/注册'
+AssertionError
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
@@ -464,36 +481,19 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr id='ft1.6' class='none'>
-    <td class='failCase'><div class='testcase'>test_TUMIUAT_408_6</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
-        失败</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft1.6')" 
-        type="button" >失败&bull;</button> 
-
-    <div id='div_ft1.6' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.6: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage.py", line 55, in test_TUMIUAT_408_6
-    assert new_find_element(self.driver,denglu).text == '登录'
-AssertionError
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_408_6</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt1.6' class="popup_window">
+      
+    </div>
+    
 </tr>
 
 <tr id='pt1.7' class='hiddenRow'>
@@ -541,59 +541,28 @@ AssertionError
     
 </tr>
 
-<tr id='pt1.10' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_TUMIUAT_413_1</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt1.10' class="popup_window">
-      
-    </div>
-    
-</tr>
-
-<tr class='errorClass'>
-    <td>test_homepage_login.test_homepage_login</td>
-    <td>6</td>
-    <td>0</td>
-    <td>1</td>
-    <td>5</td>
-    <td>
-     <!--
-        <button onclick="showClassDetail('c2',6)" class="btn btn-success" type="button" 
-            >收起</button>
-       -->
-        <a href="javascript:showClassDetail('c2',6)">&nbsp;&nbsp;收起</a>
-        
-    </td>
-</tr>
-
-<tr id='ft2.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_TUMIUAT_409_1</div></td>
+<tr id='ft1.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_TUMIUAT_413_1</div></td>
     <td colspan='5' align='center'>
 
     <!-- css div popup start -->
     <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10')" >
         失败</a>
     -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.1')" 
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft1.10')" 
         type="button" >失败&bull;</button> 
 
-    <div id='div_ft2.1' class="popup_window">
+    <div id='div_ft1.10' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.10').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.1: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 44, in test_TUMIUAT_409_1
-    assert new_find_element(self.driver, lvxingxiang).text == '旅行箱'
+ft1.10: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_homepage.py", line 73, in test_TUMIUAT_413_1
+    assert self.driver.find_element_by_xpath('//*[@id="prod-details"]/h1').text == 'Lance双肩包'
 AssertionError
 
 
@@ -604,207 +573,118 @@ AssertionError
     </td>
 </tr>
 
-<tr id='ft2.2' class='none'>
-    <td class='errorCase'><div class='testcase'>test_TUMIUAT_409_2</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.2')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
+<tr class='passClass'>
+    <td>test_homepage_login.test_homepage_login</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td>
+     <!--
+        <button onclick="showClassDetail('c2',6)" class="btn btn-success" type="button" 
+            >收起</button>
+       -->
+        <a href="javascript:showClassDetail('c2',6)">&nbsp;&nbsp;收起</a>
         
-ft2.2: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 24, in setUp
-    self.driver.get(f'{host}')
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
     </td>
 </tr>
 
-<tr id='ft2.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_TUMIUAT_409_3</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.3')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.3: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 24, in setUp
-    self.driver.get(f'{host}')
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_1</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt2.1' class="popup_window">
+      
+    </div>
+    
 </tr>
 
-<tr id='ft2.4' class='none'>
-    <td class='errorCase'><div class='testcase'>test_TUMIUAT_409_4</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.4')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.4' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.4: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 24, in setUp
-    self.driver.get(f'{host}')
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt2.2' class="popup_window">
+      
+    </div>
+    
 </tr>
 
-<tr id='ft2.5' class='none'>
-    <td class='errorCase'><div class='testcase'>test_TUMIUAT_409_5</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.5')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.5' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.5: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 24, in setUp
-    self.driver.get(f'{host}')
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_3</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt2.3' class="popup_window">
+      
+    </div>
+    
 </tr>
 
-<tr id='ft2.6' class='none'>
-    <td class='errorCase'><div class='testcase'>test_TUMIUAT_409_6</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.6')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.6' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.6: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_homepage_login.py", line 24, in setUp
-    self.driver.get(f'{host}')
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_4</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt2.4' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_5</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt2.5' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TUMIUAT_409_6</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt2.6' class="popup_window">
+      
+    </div>
+    
 </tr>
 
 <tr id='total_row'>
     <td>共</td>
     <td>16</td>
-    <td>9</td>
+    <td>14</td>
     <td>2</td>
-    <td>5</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

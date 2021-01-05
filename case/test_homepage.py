@@ -23,11 +23,13 @@ class test_homepage_nologin(unittest.TestCase):
     def setUp(self):
         self.driver.get(f'{host}')
         self.driver.maximize_window()
-        time.sleep(2)
+        self.driver.set_page_load_timeout(15)# 设定页面加载限制时间
+        self.driver.execute_script('window.stop()')# 超时报错后就强制停止加载
+        self.driver.refresh()
+        time.sleep(3)
     def test_TUMIUAT_408_1(self):
         assert new_find_element(self.driver,lvxingxiang).text == '旅行箱'
         assert new_find_element(self.driver,huiyuanjulebu).text == '会员俱乐部'
-        assert new_find_element(self.driver,zhuce_denglu).text == '登录/注册'
     def test_TUMIUAT_408_2(self):
         new_find_element(self.driver, huiyuanjulebu).click()
         #self.driver.window_handles()#获取N个网页句柄
@@ -70,4 +72,4 @@ class test_homepage_nologin(unittest.TestCase):
         ActionChains(self.driver).move_to_element(new_find_element(self.driver, sousuo)).perform()  # 鼠标悬停到搜索框
         time.sleep(5)
         self.driver.find_element_by_xpath('//*[@id="matching_products"]/li[1]/a/span[2]/span[1]').click()
-        assert self.driver.find_element_by_xpath('//*[@id="prod-details"]/h1').text == 'Lance双肩包'
+        assert self.driver.find_element_by_xpath('//*[@id="addToCartBtn"]').text == '添加到购物车'

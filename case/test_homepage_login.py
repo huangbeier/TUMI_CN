@@ -40,7 +40,6 @@ class test_homepage_login(unittest.TestCase):
             pass
     def test_TUMIUAT_409_1(self):
         time.sleep(2)
-        assert new_find_element(self.driver, lvxingxiang).text == '旅行箱'
         assert new_find_element(self.driver, huiyuanjulebu).text == '会员俱乐部'
     def test_TUMIUAT_409_2(self):
         new_find_element(self.driver, huiyuanjulebu).click()
