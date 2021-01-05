@@ -16,7 +16,10 @@ from PO.my_account import my_account
 class test_homepage_login(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver=webdriver.Chrome(executable_path=chromeDriver_Path)
+        option = webdriver.ChromeOptions()
+        option.add_argument('disable-infobars')
+        option.add_argument('headless')  # 以后台运行
+        cls.driver = webdriver.Chrome(executable_path=chromeDriver_Path)
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
