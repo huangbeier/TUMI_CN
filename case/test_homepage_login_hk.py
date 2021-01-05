@@ -28,16 +28,16 @@ class test_homepage_login_hk(unittest.TestCase):
         desired_capabilities = DesiredCapabilities.CHROME  # 修改页面加载策略
         desired_capabilities["pageLoadStrategy"] = "none"  # 注释这两行会导致最后输出结果的延迟，即等待页面加载完成再输出
         self.driver.get(f'{host}')
-        self.driver.maximize_window()
-        self.driver.set_page_load_timeout(15)# 设定页面加载限制时间
-        self.driver.execute_script('window.stop()')# 超时报错后就强制停止加载
+        # self.driver.maximize_window()
+        # self.driver.set_page_load_timeout(15)# 设定页面加载限制时间
+        # self.driver.execute_script('window.stop()')# 超时报错后就强制停止加载
         time.sleep(2)
         flag=self.driver.find_elements_by_link_text('Login / Register')
         if len(flag)==1:
             new_find_element(self.driver, zhuce_denglu).click()
             time.sleep(1)
-            new_find_element(self.driver, username).send_keys('90000001')
-            new_find_element(self.driver, password).send_keys('1111qqqq')
+            new_find_element(self.driver, username).send_keys('67969782')
+            new_find_element(self.driver, password).send_keys('Tumi_2019')
             time.sleep(2)
             new_find_element(self.driver, denglu).click()
             time.sleep(2)
