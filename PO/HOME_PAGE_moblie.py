@@ -31,6 +31,7 @@ my_account1=('xpath','//*[@id="loggedInDiv"]/a[1]')
 #搜索框
 sousuo=('id','search')
 #搜索按钮
-sousuo_anniu=('xpath','//*[@id="top-nav"]/div[5]/div[2]/form/div[1]/button/span')
+sousuo_anniu=('xpath','//*[@id="btn-search-submit"]/span')
 #会员俱乐部
 huiyuanjulebu=('xpath','//*[@id="navMainCntr"]/ul/li/ul/li[2]/a')
+
