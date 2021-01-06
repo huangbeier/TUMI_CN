@@ -26,7 +26,7 @@ password=('id','j_password')
 jixv_gouwu=('xpath','//*[@id="tm-panel-mini-cart"]/div/div[2]/a[2]')
 #关闭登录
 close_login=('xpath','//*[@id="tm-panel-login-confirmation"]/header/a/span')
-#我的账号
+#登入后-我的账号
 my_account1=('xpath','//*[@id="loggedInDiv"]/a[1]')
 #搜索框
 sousuo=('id','search')
@@ -44,6 +44,9 @@ fenlei_xiekuabao=('id','totes')
 fenlei_peijian=('id','accessories')
 #分类-环保产品
 fenlei_recycled=('id','recycled')
+#登录后弹框-查看个人信息
+gerenxinxi=('xpath','//*[@id="tm-panel-login-confirmation"]/div/div/ul[1]/li[1]/a')
+
 
 
 

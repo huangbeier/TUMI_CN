@@ -5,13 +5,8 @@ import unittest
 from selenium import webdriver
 import time
 from utils.seleniumtools import new_find_element
-from config import host,kefu_url,chromeDriver_Path
-from PO.tumi_club import huiyuan_zhuanshuliyv
-from PO.store_locator import mendianleixing
-from PO.cart import empty_gouwuche
-from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
-    tishi,gouwuche,sousuo,sousuo_anniu,fenlei_lvxingxiang,fenlei_beibao,fenlei_tuotebao,fenlei_xiekuabao,\
-    fenlei_peijian,fenlei_recycled,password,denglu,username
+from config import host,chromeDriver_Path
+from PO.HOME_PAGE import zhuce_denglu,password,denglu,username
 from selenium.webdriver import ActionChains  #实现鼠标悬停
 
 class test_login_register(unittest.TestCase):

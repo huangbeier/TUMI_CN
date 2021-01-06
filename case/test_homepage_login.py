@@ -8,7 +8,7 @@ from utils.seleniumtools import new_find_element
 from config import host,kefu_url,chromeDriver_Path
 from PO.tumi_club import huiyuan_zhuanshuliyv
 from PO.store_locator import mendianleixing
-from PO.HOME_PAGE import lvxingxiang,huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
+from PO.HOME_PAGE import huiyuanjulebu,zhuce_denglu,xianxiamendian,zaixiankefu,\
     tishi,gouwuche,denglu,jixv_gouwu,username,password,close_login,my_account1
 from PO.my_account import my_account
 

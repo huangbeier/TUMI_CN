@@ -8,9 +8,8 @@ from utils.seleniumtools import new_find_element
 from config_moblie_hk import host,kefu_url,chromeDriver_Path
 from PO.tumi_club_moblie_hk import huiyuan_zhuanshuliyv
 from PO.store_locator_moblie_hk import mendianleixing
-from PO.cart_moblie_hk import empty_gouwuche
 from PO.HOME_PAGE_moblie_hk import yijicaidan,lvxingxiang,zhuce_denglu,xianxiamendian,zaixiankefu,\
-    tishi,gouwuche,sousuo,sousuo_anniu,username,password,denglu,close_login,huiyuanjulebu
+    sousuo,sousuo_anniu,username,password,denglu,close_login,huiyuanjulebu
 from selenium.webdriver import ActionChains  #实现鼠标悬停
 from selenium.webdriver.chrome.options import Options
 
