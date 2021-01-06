@@ -104,19 +104,21 @@ class test_homepage_nologin_hk(unittest.TestCase):
         assert self.driver.current_url == f'{host}/c-bag/totes/?q=:relevance&pageSize=30&page=0&sort=relevance'
         assert self.driver.find_element_by_xpath(
             '//*[@id="navEnd"]/div[4]/div[2]/div[1]/div/div[1]/h1/span[1]').text == 'Tote Bags for Men & Women'
+
     def test_TUMIUAT_1521_4(self):
-        new_find_element(self.driver,fenlei_xiekuabao).click()
+        new_find_element(self.driver, fenlei_xiekuabao).click()
         self.driver.switch_to_window(self.driver.window_handles[-1])  # 切换到最新的网页
         time.sleep(2)
         assert self.driver.current_url == f'{host}/c-bag/crossbodies/?q=:relevance&pageSize=30&page=0&sort=relevance'
         assert self.driver.find_element_by_xpath(
-            '//*[@id="navEnd"]/div[4]/div[2]/div[1]/div/div[1]/h1/span[1]').text == '斜挎包 - 休闲斜挎包'
+            '//*[@id="navEnd"]/div[4]/div[2]/div[1]/div/div[1]/h1/span[1]').text == 'Cross Body Bags, Carry On Luggage & Totes'
     def test_TUMIUAT_1521_5(self):
-        new_find_element(self.driver,fenlei_peijian).click()
+        new_find_element(self.driver, fenlei_peijian).click()
         self.driver.switch_to_window(self.driver.window_handles[-1])  # 切换到最新的网页
         time.sleep(2)
         assert self.driver.current_url == f'{host}/c-accessories/?q=:relevance&pageSize=30&page=0&sort=relevance'
-        assert self.driver.find_element_by_xpath('//*[@id="navEnd"]/div[4]/div[2]/div[1]/div/div[1]/h1/span[1]').text == 'Cross Body Bags, Carry On Luggage & Totes'
+        assert self.driver.find_element_by_xpath(
+            '//*[@id="navEnd"]/div[4]/div[2]/div[1]/div/div[1]/h1/span[1]').text == 'All Accessories, Electronics, Wallets & Money Clips'
     def test_TUMIUAT_1521_6(self):
         new_find_element(self.driver,fenlei_recycled).click()
         self.driver.switch_to_window(self.driver.window_handles[-1])  # 切换到最新的网页

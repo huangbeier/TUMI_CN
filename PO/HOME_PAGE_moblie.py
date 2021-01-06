@@ -34,4 +34,15 @@ sousuo=('id','search')
 sousuo_anniu=('xpath','//*[@id="btn-search-submit"]/span')
 #会员俱乐部
 huiyuanjulebu=('xpath','//*[@id="navMainCntr"]/ul/li/ul/li[2]/a')
-
+#分类-旅行箱
+fenlei_lvxingxiang=('id','luggage')
+#分类-背包
+fenlei_beibao=('id','backpacks')
+#分类-托特包
+fenlei_tuotebao=('id','crossbodies')
+#分类-斜挎包
+fenlei_xiekuabao=('id','totes')
+#分类-配件
+fenlei_peijian=('id','accessories')
+#分类-环保产品
+fenlei_recycled=('id','recycled')
