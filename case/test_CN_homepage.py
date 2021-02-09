@@ -194,6 +194,39 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.new_page()
         assert new_find_element(self.driver,homepage_assert_element.tumi_different).text =='TUMI的独特之处'
 
+    def test_TUMIUAT_1515(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_phone_error()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage_assert_element.username_error).text == '你的用户名或密码不正确。'
+
+    def test_TUMIUAT_1514(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_no_phone()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage_assert_element.j_username_error).text == '手机/邮箱 为必填选项'
+
+    def test_TUMIUAT_423(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_no_password()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage_assert_element.j_password_error).text == '密码 为必填选项'
+
+    def test_TUMIUAT_424(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login_password_error()
+        time.sleep(2)
+        assert new_find_element(self.driver, homepage_assert_element.username_error).text == '你的用户名或密码不正确。'
+
+    def test_TUMIUAT_426(self):
+        homepage1 = homepage(self.driver)
+        homepage1.login()
+        homepage1.sign_out()
+        assert new_find_element(self.driver, homepage.login_register_btn).text == '登录/注册'
+
+
+
+
 
 
 

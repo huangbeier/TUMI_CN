@@ -1,0 +1,64 @@
+# @Author ：黄贝尔
+# @Time ：2021/2/9__13:39
+# #coding:utf-8
+from base_page import page
+import time
+from CN_homepage import homepage
+
+class my_account(page):
+
+    #查看个人信息
+    view_my_info=('xpath',"//body/div[2]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/ul[1]/li[1]/a[1]")
+    #查看我的账号
+    view_my_account=('xpath','//header/div[3]/div[3]/div[3]/a[1]')
+    #更新个人信息
+    update_my_info=('xpath',"//a[contains(text(),'更新个人信息')]")
+    #地址簿
+    my_address=('xpath',"//a[contains(text(),'我的地址簿')]")
+    #更新密码
+    update_my_password=('xpath',"//a[contains(text(),'更新密码')]")
+    #附近门店
+    nearby_stores=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/a[1]')
+    #返回门店搜索
+    store_search=('xpath',"//a[contains(text(),'< 返回门店搜索')]")
+    #个性化输入框
+    diy_Input=('id','monogram.initials')
+    #个性化按钮
+    diy_btn=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/button[1]/span[1]')
+
+    def __init__(self,driver):
+        page.__int__(self, driver)
+    def go_to_my_info(self):
+        self.click(homepage.login_register_btn)
+        time.sleep(1)
+        self.input_text(homepage.phone, text='17316565325')
+        self.input_text(homepage.password, text='gxjy541')
+        self.click(homepage.login_btn)
+        time.sleep(1)
+        self.click(self.view_my_info)
+
+    def go_to_my_account(self):
+        homepage1=homepage(self.driver)
+        homepage1.login()
+        time.sleep(1)
+        self.click(self.view_my_account)
+        self.driver.refresh()
+
+    def click_nearby_stores(self):
+        self.click(self.nearby_stores)
+
+    def click_store_search(self):
+        self.click(self.store_search)
+
+    def input_diy(self):
+        self.input_text(self.diy_Input,text='1')
+
+    def click_diy_btn(self):
+        self.action(self.diy_btn)
+        self.click(self.diy_btn)
+
+
+
+
+
+

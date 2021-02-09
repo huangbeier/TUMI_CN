@@ -61,6 +61,8 @@ class homepage(page):
     bottom_AD_space_explore2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/div[1]")
     # 底部广告位-图片 右边的那个
     bottom_AD_space_img2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/a[1]/img[1]")
+    #登出
+    sign_out_btn=('link text','登出')
 
     def __init__(self,driver):
         page.__int__(self, driver)
@@ -74,6 +76,39 @@ class homepage(page):
         time.sleep(1)
         self.click(self.close_login)
         time.sleep(0.5)
+
+    def sign_out(self):
+        self.click(self.sign_out_btn)
+
+    def login_no_phone(self):
+        self.click(self.login_register_btn)
+        time.sleep(1)
+        self.input_text(self.password,text='gxjy541')
+        self.click(self.login_btn)
+        time.sleep(1)
+
+    def login_phone_error(self):
+        self.click(self.login_register_btn)
+        time.sleep(1)
+        self.input_text(self.phone, text='17316565329')
+        self.input_text(self.password,text='gxjy541')
+        self.click(self.login_btn)
+        time.sleep(1)
+
+    def login_no_password(self):
+        self.click(self.login_register_btn)
+        time.sleep(1)
+        self.input_text(self.phone, text='17316565325')
+        self.click(self.login_btn)
+        time.sleep(1)
+
+    def login_password_error(self):
+        self.click(self.login_register_btn)
+        time.sleep(1)
+        self.input_text(self.phone, text='17316565325')
+        self.input_text(self.password,text='gxjy5411')
+        self.click(self.login_btn)
+        time.sleep(1)
 
     def click_logo(self):
         self.click(self.logo)
