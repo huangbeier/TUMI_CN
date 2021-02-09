@@ -1,7 +1,7 @@
 # @Author ：黄贝尔
 # @Time ：2021/2/7__14:23
 # #coding:utf-8
-class assert_element():
+class homepage_assert_element():
     vip_Privilege=('xpath',"//strong[contains(text(),'会员专属礼遇')]")
     wechat_text=('xpath','//header/div[3]/div[2]/a[2]/div[1]/div[2]/p[1]')
     store_type=('xpath',"//div[contains(text(),'门店类型')]")
