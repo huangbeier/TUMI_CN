@@ -3,7 +3,7 @@
 # #coding:utf-8
 from base_page import page
 import time
-from CN_homepage import homepage
+from CN_001_homepage import homepage
 
 class my_account(page):
 
@@ -35,7 +35,8 @@ class my_account(page):
     account_email=('id','profile.email')
     #更新保存按钮
     account_save_btn=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[3]/button[1]')
-
+    #个人中心logo
+    account_logo=('xpath','//body/div[1]/section[1]/div[4]/div[1]/a[1]/img[1]')
 
     def __init__(self,driver):
         page.__int__(self, driver)
@@ -48,6 +49,11 @@ class my_account(page):
         time.sleep(1)
         self.click(self.view_my_info)
 
+    def click_account_logo(self):
+        self.click(self.account_logo)
+
+    def move_to_logo(self):
+        self.action(self.account_logo)
     def go_to_my_account(self):
         homepage1=homepage(self.driver)
         homepage1.login()
@@ -73,6 +79,9 @@ class my_account(page):
 
     def clear_account_username(self):
         self.clear_loc(self.account_username)
+
+    def clear_account_email(self):
+        self.clear_loc(self.account_email)
 
     def input_account_username(self):
         self.input_text(self.account_username,text='测试')
