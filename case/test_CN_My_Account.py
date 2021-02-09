@@ -60,6 +60,18 @@ class MyAccount(unittest.TestCase):
         time.sleep(1)
         assert new_find_element(self.driver, my_account_assert_element.diy_title).text == '点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母'
 
+    def test_TUMIUAT_567(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.input_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_miss()
+        my_account1.input_account_email()
+        my_account1.click_account_save_btn()
+        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+
 
 
 

@@ -24,3 +24,6 @@ class page(object):
     def roll_to_element(self,num): #向下滚动X像素
         self.driver.execute_script(f'window.scrollBy(0,{num})')
 
+    def clear_loc(self,loc):
+        new_find_element(self.driver, loc).clear()
+

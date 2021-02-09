@@ -25,6 +25,17 @@ class my_account(page):
     diy_Input=('id','monogram.initials')
     #个性化按钮
     diy_btn=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/button[1]/span[1]')
+    #更新个人信息用户名输入框
+    account_username=('id','profile.userName')
+    #更新个人信息称呼
+    account_call =('id','profile.titleSelectBoxIt')
+    #小姐称呼
+    call_miss = ('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[1]/ul[1]/li[2]/a[1]')
+    #更新个人信息邮箱
+    account_email=('id','profile.email')
+    #更新保存按钮
+    account_save_btn=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[2]/div[2]/form[1]/div[3]/button[1]')
+
 
     def __init__(self,driver):
         page.__int__(self, driver)
@@ -56,6 +67,31 @@ class my_account(page):
     def click_diy_btn(self):
         self.action(self.diy_btn)
         self.click(self.diy_btn)
+
+    def click_update_my_info(self):
+        self.click(self.update_my_info)
+
+    def clear_account_username(self):
+        self.clear_loc(self.account_username)
+
+    def input_account_username(self):
+        self.input_text(self.account_username,text='测试')
+
+    def click_account_call(self):
+        self.click(self.account_call)
+
+    def click_call_miss(self):
+        self.click(self.call_miss)
+
+    def input_account_email(self):
+        self.input_text(self.account_email,text='testtest@qq.com')
+
+    def click_account_save_btn(self):
+        self.click(self.account_save_btn)
+
+
+
+
 
 
 
