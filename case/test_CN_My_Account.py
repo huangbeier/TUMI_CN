@@ -13,9 +13,9 @@ class MyAccount(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver=webdriver.Chrome(chromeDriver_Path)
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
     def setUp(self):
         self.driver.get(cn_url)
         self.driver.maximize_window()
