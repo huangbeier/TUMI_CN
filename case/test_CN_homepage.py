@@ -127,21 +127,75 @@ class HOMEPAGE(unittest.TestCase):
     def test_TUMIUAT_1510_1(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_luggage()
-        print(self.driver.current_url)
-        assert self.driver.current_url == f'{cn_url}c-luggage/'
         assert new_find_element(self.driver, assert_element.luggage_title).text =='各类旅行箱 - 托运旅行箱、登机箱'
 
     def test_TUMIUAT_1510_2(self):
         homepage1 = homepage(self.driver)
         homepage1.click_f_backpacks()
-        print(self.driver.current_url)
-        assert self.driver.current_url == f'{cn_url}c-backpacks/'
         assert new_find_element(self.driver, assert_element.backpacks_title).text =='各类背包 - 商务、旅行、休闲背包'
 
+    def test_TUMIUAT_1510_3(self):
+        homepage1 = homepage(self.driver)
+        homepage1.click_f_totes()
+        assert new_find_element(self.driver, assert_element.totes_title).text =='斜挎包 - 休闲斜挎包'
+
+    def test_TUMIUAT_1510_4(self):
+        homepage1 = homepage(self.driver)
+        homepage1.click_f_crossbodies()
+        assert new_find_element(self.driver, assert_element.crossbodies_title).text =='托特包 - 手拎包、手袋'
+
+    def test_TUMIUAT_1510_5(self):
+        homepage1 = homepage(self.driver)
+        homepage1.click_f_accessories()
+        assert new_find_element(self.driver, assert_element.accessories_title).text =='各类旅行配件、电子产品、钱包等'
+
+    def test_TUMIUAT_1510_6(self):
+        homepage1 = homepage(self.driver)
+        homepage1.click_f_recycled()
+        assert new_find_element(self.driver, assert_element.recycled_title).text =='由可回收材料制成的环保系列'
+
+    def test_TUMIUAT_417_1(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_title()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.alpha3_title).text =='全新TUMI Alpha 3系列'
+
+    def test_TUMIUAT_417_2(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_img()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.alpha3_title).text =='全新TUMI Alpha 3系列'
 
 
+    def test_TUMIUAT_417_3(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_explore()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.alpha3_title).text =='全新TUMI Alpha 3系列'
 
+    def test_TUMIUAT_417_4(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_title2()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.tumi_different).text =='TUMI的独特之处'
 
+    def test_TUMIUAT_417_5(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_img2()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.tumi_different).text =='TUMI的独特之处'
+
+    def test_TUMIUAT_417_6(self):
+        homepage1 = homepage(self.driver)
+        homepage1.roll_to_bottom_AD_space()
+        homepage1.click_bottom_AD_space_explore2()
+        homepage1.new_page()
+        assert new_find_element(self.driver, assert_element.tumi_different).text =='TUMI的独特之处'
 
 
 

@@ -20,3 +20,7 @@ class page(object):
 
     def new_page(self):
         self.driver.switch_to_window(self.driver.window_handles[-1]) # 切换到最新的网页
+
+    def roll_to_element(self,num): #向下滚动X像素
+        self.driver.execute_script(f'window.scrollBy(0,{num})')
+

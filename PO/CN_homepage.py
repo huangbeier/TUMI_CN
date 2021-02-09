@@ -41,6 +41,27 @@ class homepage(page):
     f_luggage=('id',"luggage")
     #分类广告位-背包
     f_backpacks=('id','backpacks')
+    #分类广告位-托特包
+    f_crossbodies=('id','crossbodies')
+    #分类广告位-斜挎包
+    f_totes=('id','totes')
+    #分类广告位-钱包与配件
+    f_accessories=('id','accessories')
+    #分类广告位-环保产品
+    f_recycled=('id','recycled')
+    #底部广告位-标题
+    bottom_AD_space_title=('xpath','//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[2]/a[1]/h3[1]')
+    #底部广告位-即可探索
+    bottom_AD_space_explore=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[2]/a[1]/div[1]")
+    # 底部广告位-图片
+    bottom_AD_space_img=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/a[1]/img[1]")
+    # 底部广告位-标题 右边的那个
+    bottom_AD_space_title2 = ('xpath', '//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/h3[1]')
+    #底部广告位-即可探索 右边的那个
+    bottom_AD_space_explore2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[2]/a[1]/div[1]")
+    # 底部广告位-图片 右边的那个
+    bottom_AD_space_img2=('xpath',"//body/div[3]/div[1]/div[1]/div[1]/ul[1]/li[2]/div[1]/a[1]/img[1]")
+
     def __init__(self,driver):
         page.__int__(self, driver)
 
@@ -101,6 +122,44 @@ class homepage(page):
     def click_f_backpacks(self):
         self.click(self.f_backpacks)
         self.new_page()
+
+    def click_f_crossbodies(self):
+        self.click(self.f_crossbodies)
+        self.new_page()
+
+    def click_f_totes(self):
+        self.click(self.f_totes)
+        self.new_page()
+
+    def click_f_accessories(self):
+        self.click(self.f_accessories)
+        self.new_page()
+
+    def click_f_recycled(self):
+        self.click(self.f_recycled)
+        self.new_page()
+
+    def roll_to_bottom_AD_space(self):
+        self.roll_to_element(3000)
+        time.sleep(2)
+
+    def click_bottom_AD_space_title(self):
+        self.click(self.bottom_AD_space_title)
+
+    def click_bottom_AD_space_title2(self):
+        self.click(self.bottom_AD_space_title2)
+
+    def click_bottom_AD_space_explore(self):
+        self.click(self.bottom_AD_space_explore)
+
+    def click_bottom_AD_space_explore2(self):
+        self.click(self.bottom_AD_space_explore2)
+
+    def click_bottom_AD_space_img(self):
+        self.click(self.bottom_AD_space_img)
+
+    def click_bottom_AD_space_img2(self):
+        self.click(self.bottom_AD_space_img2)
 
 
 
