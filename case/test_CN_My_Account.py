@@ -84,6 +84,143 @@ class MyAccount(unittest.TestCase):
         my_account1.click_account_save_btn()
         assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
 
+    def test_038_TUMIUAT_568(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_miss()
+        my_account1.clear_account_email()
+        my_account1.input_account_email()
+        my_account1.click_account_save_btn()
+        assert new_find_element(self.driver,my_account.userName_errors).text== '请输入用户名'
+
+    def test_039_TUMIUAT_1578(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.input_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_null()
+        my_account1.clear_account_email()
+        my_account1.input_account_email()
+        my_account1.click_account_save_btn()
+        assert new_find_element(self.driver,my_account.titleCode_errors).text== '请选择您的称呼'
+
+    def test_040_TUMIUAT_1579(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.input_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_miss()
+        my_account1.clear_account_email()
+        my_account1.input_account_email()
+        my_account1.click_account_save_btn()
+        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+
+    def test_041_TUMIUAT_1582(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.input_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_miss()
+        my_account1.clear_account_email()
+        my_account1.click_account_save_btn()
+        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+
+    def test_042_TUMIUAT_1583(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_info()
+        my_account1.clear_account_username()
+        my_account1.input_account_username()
+        my_account1.click_account_call()
+        my_account1.click_call_miss()
+        my_account1.clear_account_email()
+        my_account1.input_account_email()
+        my_account1.click_no_save()
+        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+
+    def test_043_TUMIUAT_571(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.input_address_consignee()
+        my_account1.input_address_phone()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+
+    def test_044_TUMIUAT_572(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_address_edit()
+        my_account1.input_address_consignee()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+
+    def test_045_TUMIUAT_573(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_address_del()
+        assert new_find_element(self.driver, my_account.address_name).text != '测试测试测试测试'
+
+    def test_046_TUMIUAT_1584(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.clear_address_consignee()
+        my_account1.input_address_phone()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.nameErrors).text == '收货人为必填信息'
+
+    def test_047_TUMIUAT_1585(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.input_address_consignee()
+        my_account1.input_address_phone2()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.phoneErrors).text == '请输入正确的手机号码'
+
+    def test_048_TUMIUAT_1586(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.input_address_consignee()
+        my_account1.input_address_phone()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_default_address()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
+        my_account1.click_address_del()
 
 
 
