@@ -73,7 +73,7 @@ class homepage(page):
         self.input_text(self.phone,text='17316565325')
         self.input_text(self.password,text='gxjy541')
         self.click(self.login_btn)
-        time.sleep(1)
+        time.sleep(1.5)
         self.click(self.close_login)
         time.sleep(0.5)
 
