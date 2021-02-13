@@ -328,9 +328,9 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>TUMI</h1>
 <p class='attribute'><strong>测试人员:</strong> tester</p>
-<p class='attribute'><strong>开始时间:</strong> 2021-02-12 21:15:45</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:13:43.229168</p>
-<p class='attribute'><strong>测试结果:</strong> 通过 50 错误 1</p>
+<p class='attribute'><strong>开始时间:</strong> 2021-02-12 22:41:44</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:11:53.180942</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 51</p>
 
 <p class='description'>TUMI</p>
 </div>
@@ -340,16 +340,16 @@ function showOutput(id, name) {
 <p id='show_detail_line'>
 
 
-<button class="btn btn-primary" onclick="#" type="button" >概要(98.04%)</button>
+<button class="btn btn-primary" onclick="#" type="button" >概要(100.0%)</button>
 
-<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(50)</button>
+<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(51)</button>
 
 <button class="btn btn-danger" onclick="showCase(1)" type="button" >失败(0)</button>
 
 <button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(51)</button>
 
 <!--
-<a href='javascript:showCase(0)'>通过(50)</a>
+<a href='javascript:showCase(0)'>通过(51)</a>
 <a href='javascript:showCase(1)'>失败(0)</a>
 <a href='javascript:showCase(2)'>所有(51)</a>
 
@@ -644,12 +644,12 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>test_CN_homepage.HOMEPAGE</td>
     <td>34</td>
-    <td>33</td>
+    <td>34</td>
     <td>0</td>
-    <td>1</td>
+    <td>0</td>
     <td>
      <!--
         <button onclick="showClassDetail('c2',34)" class="btn btn-success" type="button" 
@@ -1095,50 +1095,19 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr id='ft2.30' class='none'>
-    <td class='errorCase'><div class='testcase'>test_027_TUMIUAT_409_4</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.30')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft2.30')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft2.30' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.30').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.30: Traceback (most recent call last):
-  File "D:\huang_Project\TUMI\case\test_CN_homepage.py", line 202, in test_027_TUMIUAT_409_4
-    homepage1.login()
-  File "D:\huang_Project\TUMI\PO\CN_001_homepage.py", line 77, in login
-    self.click(self.close_login)
-  File "D:\huang_Project\TUMI\PO\base_page.py", line 16, in click
-    new_find_element(self.driver,loc).click()
-  File "C:\Users\AMBER\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\AMBER\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\AMBER\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\AMBER\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=88.0.4324.150)
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt2.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_027_TUMIUAT_409_4</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt2.30' class="popup_window">
+      
+    </div>
+    
 </tr>
 
 <tr id='pt2.31' class='hiddenRow'>
@@ -1204,9 +1173,9 @@ selenium.common.exceptions.ElementNotInteractableException: Message: element not
 <tr id='total_row'>
     <td>共</td>
     <td>51</td>
-    <td>50</td>
+    <td>51</td>
     <td>0</td>
-    <td>1</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

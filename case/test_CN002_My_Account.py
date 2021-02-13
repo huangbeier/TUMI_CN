@@ -9,6 +9,7 @@ from selenium import webdriver
 from config import chromeDriver_Path,cn_kefu_url,cn_url,cn_cart,cn_account
 from utils.seleniumtools import new_find_element
 from CN_001_homepage import homepage
+from base_page import page
 
 class MyAccount(unittest.TestCase):
     @classmethod
@@ -221,6 +222,73 @@ class MyAccount(unittest.TestCase):
         my_account1.click_address_save()
         assert new_find_element(self.driver, my_account.creat_new_address).text == '添加收货地址'
         my_account1.click_address_del()
+
+    def test_049_TUMIUAT_1613(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.input_address_consignee()
+        my_account1.input_address_phone()
+        my_account1.input_addressEditTelphone()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.areaPhone_errors).text == '请输入完整的固定电话号码'
+
+    def test_050_TUMIUAT_1588(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_address_book_btn()
+        my_account1.click_creat_new_address()
+        my_account1.input_address_consignee()
+        my_account1.input_address_phone()
+        my_account1.input_addressEditAreaCode()
+        my_account1.click_address_region()
+        my_account1.click_address_beijing()
+        my_account1.click_address_qu()
+        my_account1.input_address_Detailed()
+        my_account1.click_address_save()
+        assert new_find_element(self.driver, my_account.areaPhone_errors).text == '请输入完整的固定电话号码'
+
+
+    def test_051_TUMIUAT_574(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password()
+        my_account1.input_new_password()
+        my_account1.input_confirm_new_password()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.modifly_password_successful).text == '您的密码已被更改'
+
+    def test_051_TUMIUAT_574_2(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account2()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password2()
+        my_account1.input_new_password2()
+        my_account1.input_confirm_new_password2()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.modifly_password_successful).text == '您的密码已被更改'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

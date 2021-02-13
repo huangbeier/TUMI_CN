@@ -75,6 +75,22 @@ class my_account(page):
     phoneErrors=('id','phone.errors')
     #地址-设为默认地址
     default_address=('xpath',"//label[contains(text(),'设为默认地址')]")
+    #地址-固定电话-区号
+    addressEditAreaCode=('id','addressEditAreaCode')
+    #地址-固定电话-电话号
+    addressEditTelphone=('id','addressEditTelphone')
+    #地址-固定电话报错
+    areaPhone_errors=('id','areaPhone.errors')
+    #更新密码-当前密码
+    now_password=('id','profile.currentPassword')
+    #更新密码-新密码
+    new_password=('id','profile-newPassword')
+    #更新密码-确认新密码
+    confirm_new_password=('id','profile.checkNewPassword')
+    #更新密码-保存新密码
+    save_new_password=('xpath','//body/div[1]/main[1]/div[2]/div[4]/div[2]/div[1]/div[1]/form[1]/div[4]/button[1]')
+    #密码修改成功
+    modifly_password_successful=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]')
 
 
     def __init__(self,driver):
@@ -96,6 +112,13 @@ class my_account(page):
     def go_to_my_account(self):
         homepage1=homepage(self.driver)
         homepage1.login()
+        time.sleep(1)
+        self.click(self.view_my_account)
+        self.driver.refresh()
+
+    def go_to_my_account2(self):
+        homepage1=homepage(self.driver)
+        homepage1.login2()
         time.sleep(1)
         self.click(self.view_my_account)
         self.driver.refresh()
@@ -184,6 +207,38 @@ class my_account(page):
 
     def click_default_address(self):
         self.click(self.default_address)
+
+    def input_addressEditAreaCode(self):
+        self.input_text(self.addressEditAreaCode,text='021')
+
+    def input_addressEditTelphone(self):
+        self.input_text(self.addressEditAreaCode,text='55555555')
+
+    def click_update_my_password(self):
+        self.click(self.update_my_password)
+
+    def input_now_password(self):
+        self.input_text(self.now_password,text='gxjy541')
+
+    def input_now_password2(self):
+        self.input_text(self.now_password,text='1qaz2wsx')
+
+    def input_new_password(self):
+        self.input_text(self.new_password,text='1qaz2wsx')
+
+    def input_new_password2(self):
+        self.input_text(self.new_password,text='gxjy541')
+
+    def input_confirm_new_password(self):
+        self.input_text(self.confirm_new_password,text='1qaz2wsx')
+
+    def input_confirm_new_password2(self):
+        self.input_text(self.confirm_new_password,text='gxjy541')
+
+    def click_save_new_password(self):
+        self.click(self.save_new_password)
+
+
 
 
 

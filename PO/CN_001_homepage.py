@@ -75,7 +75,17 @@ class homepage(page):
         self.click(self.login_btn)
         time.sleep(1.5)
         self.click(self.close_login)
-        time.sleep(0.5)
+        time.sleep(1)
+
+    def login2(self):
+        self.click(self.login_register_btn)
+        time.sleep(1)
+        self.input_text(self.phone, text='17316565325')
+        self.input_text(self.password, text='1qaz2wsx')
+        self.click(self.login_btn)
+        time.sleep(1.5)
+        self.click(self.close_login)
+        time.sleep(1)
 
     def sign_out(self):
         self.click(self.sign_out_btn)
