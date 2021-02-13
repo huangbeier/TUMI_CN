@@ -91,6 +91,12 @@ class my_account(page):
     save_new_password=('xpath','//body/div[1]/main[1]/div[2]/div[4]/div[2]/div[1]/div[1]/form[1]/div[4]/button[1]')
     #密码修改成功
     modifly_password_successful=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]')
+    #修改密码-当前密码报错
+    nowPassword_errors=('id','currentPassword.errors')
+    #修改密码-新密码报错
+    newPassword_errors=('id','newPassword.errors')
+    #修改密码-确认密码报错
+    checkNewPassword_errors=('id','checkNewPassword.errors')
 
 
     def __init__(self,driver):

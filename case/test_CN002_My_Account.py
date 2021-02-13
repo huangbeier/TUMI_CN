@@ -264,7 +264,7 @@ class MyAccount(unittest.TestCase):
         my_account1.click_save_new_password()
         assert new_find_element(self.driver, my_account.modifly_password_successful).text == '您的密码已被更改'
 
-    def test_051_TUMIUAT_574_2(self):
+    def test_052_TUMIUAT_574_2(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_account2()
         my_account1.click_update_my_password()
@@ -274,6 +274,53 @@ class MyAccount(unittest.TestCase):
         my_account1.click_save_new_password()
         assert new_find_element(self.driver, my_account.modifly_password_successful).text == '您的密码已被更改'
 
+    def test_053_TUMIUAT_575(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_new_password()
+        my_account1.input_confirm_new_password()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.nowPassword_errors).text == '请输入您的当前密码'
+
+
+    def test_054_TUMIUAT_576(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password2()
+        my_account1.input_new_password2()
+        my_account1.input_confirm_new_password2()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.nowPassword_errors).text == '请输入正确的密码'
+
+    def test_055_TUMIUAT_577(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password()
+        my_account1.input_confirm_new_password()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.newPassword_errors).text == '请输入您的新密码'
+
+    def test_056_TUMIUAT_578(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password()
+        my_account1.input_new_password()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.checkNewPassword_errors).text == '请输入您的确认密码'
+
+    def test_057_TUMIUAT_579(self):
+        my_account1 = my_account(self.driver)
+        my_account1.go_to_my_account()
+        my_account1.click_update_my_password()
+        my_account1.input_now_password()
+        my_account1.input_new_password()
+        my_account1.input_confirm_new_password2()
+        my_account1.click_save_new_password()
+        assert new_find_element(self.driver, my_account.checkNewPassword_errors).text == '密码和确认密码不匹配'
 
 
 
