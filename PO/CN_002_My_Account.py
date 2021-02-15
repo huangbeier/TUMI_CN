@@ -98,6 +98,12 @@ class my_account(page):
     #修改密码-确认密码报错
     checkNewPassword_errors=('id','checkNewPassword.errors')
 
+    my_account_title = ('xpath', "//h2[contains(text(),'个人信息')]")
+    store_name = ('xpath', "//body/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]/h2[1]")
+    store_type = ('xpath', "//div[contains(text(),'门店类型')]")
+    diy_title = ('xpath', "//p[contains(text(),'点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母')]")
+
+
 
     def __init__(self,driver):
         page.__int__(self, driver)

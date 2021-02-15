@@ -3,7 +3,6 @@
 # #coding:utf-8
 import unittest
 from CN_002_My_Account import my_account
-from CN_other import my_account_assert_element
 import time
 from selenium import webdriver
 from config import chromeDriver_Path,cn_kefu_url,cn_url,cn_cart,cn_account
@@ -36,7 +35,7 @@ class MyAccount(unittest.TestCase):
     def test_032_TUMIUAT_564(self):
         my_account1 = my_account(self.driver)
         my_account1.go_to_my_info()
-        assert new_find_element(self.driver,my_account_assert_element.my_account_title).text == '个人信息'
+        assert new_find_element(self.driver,my_account.my_account_title).text == '个人信息'
 
     def test_033_TUMIUAT_565(self):
         my_account1 = my_account(self.driver)
@@ -51,7 +50,7 @@ class MyAccount(unittest.TestCase):
         time.sleep(6)
         b=new_find_element(self.driver,my_account.nearby_stores).text
         my_account1.click_nearby_stores()
-        a = new_find_element(self.driver,my_account_assert_element.store_name).text
+        a = new_find_element(self.driver,my_account.store_name).text
         assert b == a
 
     def test_035_TUMIUAT_1529_2(self):
@@ -60,7 +59,7 @@ class MyAccount(unittest.TestCase):
         time.sleep(6)
         my_account1.click_nearby_stores()
         my_account1.click_store_search()
-        assert new_find_element(self.driver,my_account_assert_element.store_type).text == '门店类型'
+        assert new_find_element(self.driver,my_account.store_type).text == '门店类型'
 
     def test_036_TUMIUAT_566(self):
         my_account1 = my_account(self.driver)
@@ -69,7 +68,7 @@ class MyAccount(unittest.TestCase):
         time.sleep(1)
         my_account1.click_diy_btn()
         time.sleep(1)
-        assert new_find_element(self.driver, my_account_assert_element.diy_title).text == '点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母'
+        assert new_find_element(self.driver, my_account.diy_title).text == '点击下方输入框激活个性化定制，激活后在输入框内输入您想要定制的字母'
         self.driver.refresh()
 
     def test_037_TUMIUAT_567(self):
@@ -83,7 +82,7 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
 
     def test_038_TUMIUAT_568(self):
         my_account1 = my_account(self.driver)
@@ -121,7 +120,7 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
 
     def test_041_TUMIUAT_1582(self):
         my_account1 = my_account(self.driver)
@@ -133,7 +132,7 @@ class MyAccount(unittest.TestCase):
         my_account1.click_call_miss()
         my_account1.clear_account_email()
         my_account1.click_account_save_btn()
-        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
 
     def test_042_TUMIUAT_1583(self):
         my_account1 = my_account(self.driver)
@@ -146,7 +145,7 @@ class MyAccount(unittest.TestCase):
         my_account1.clear_account_email()
         my_account1.input_account_email()
         my_account1.click_no_save()
-        assert new_find_element(self.driver, my_account_assert_element.update_my_info).text == '更新个人信息'
+        assert new_find_element(self.driver, my_account.update_my_info).text == '更新个人信息'
 
     def test_043_TUMIUAT_571(self):
         my_account1 = my_account(self.driver)
