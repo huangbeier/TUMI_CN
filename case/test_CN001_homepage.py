@@ -3,7 +3,6 @@
 # #coding:utf-8
 import unittest
 from CN_001_homepage import homepage
-from CN_other import homepage_assert_element
 import time
 from selenium import webdriver
 from config import chromeDriver_Path,cn_kefu_url,cn_url,cn_cart,cn_account

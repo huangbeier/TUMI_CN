@@ -5,10 +5,10 @@ import unittest
 from CN_002_My_Account import my_account
 import time
 from selenium import webdriver
-from config import chromeDriver_Path,cn_kefu_url,cn_url,cn_cart,cn_account
+from config import chromeDriver_Path,cn_url
 from utils.seleniumtools import new_find_element
 from CN_001_homepage import homepage
-from base_page import page
+
 
 class MyAccount(unittest.TestCase):
     @classmethod

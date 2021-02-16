@@ -73,6 +73,7 @@ class homepage(page):
     luggage_title=('xpath',"//span[contains(text(),'各类旅行箱 - 托运旅行箱、登机箱')]")
     backpacks_title = ('xpath', "//span[contains(text(),'各类背包 - 商务、旅行、休闲背包')]")
     crossbodies_title=('xpath',"//span[contains(text(),'托特包 - 手拎包、手袋')]")
+    bag_title=('xpath',"//span[contains(text(),'各类手袋 - 手拎包、斜挎包、公文包')]")
     totes_title=('xpath',"//span[contains(text(),'斜挎包 - 休闲斜挎包')]")
     accessories_title=('xpath',"//span[contains(text(),'各类旅行配件、电子产品、钱包等')]")
     recycled_title=('xpath',"//span[contains(text(),'由可回收材料制成的环保系列')]")
