@@ -77,6 +77,7 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.search_for_Effective_Products()
         homepage1.click_suggested_keyword()
         assert new_find_element(self.driver,homepage.have_search).text == '搜索结果'
+        assert self.driver.find_element_by_xpath('/html[1]/body[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]').text == '“ALPHA”'
 
     def test_010_TUMIUAT_1510_1(self):
         homepage1 = homepage(self.driver)
