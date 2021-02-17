@@ -328,9 +328,9 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>TUMI</h1>
 <p class='attribute'><strong>测试人员:</strong> tester</p>
-<p class='attribute'><strong>开始时间:</strong> 2021-02-13 21:21:57</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:11:33.121845</p>
-<p class='attribute'><strong>测试结果:</strong> 通过 60</p>
+<p class='attribute'><strong>开始时间:</strong> 2021-02-17 15:07:38</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:24:48.608704</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 87 错误 2</p>
 
 <p class='description'>TUMI</p>
 </div>
@@ -340,18 +340,18 @@ function showOutput(id, name) {
 <p id='show_detail_line'>
 
 
-<button class="btn btn-primary" onclick="#" type="button" >概要(100.0%)</button>
+<button class="btn btn-primary" onclick="#" type="button" >概要(97.75%)</button>
 
-<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(60)</button>
+<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(87)</button>
 
 <button class="btn btn-danger" onclick="showCase(1)" type="button" >失败(0)</button>
 
-<button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(60)</button>
+<button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(89)</button>
 
 <!--
-<a href='javascript:showCase(0)'>通过(60)</a>
+<a href='javascript:showCase(0)'>通过(87)</a>
 <a href='javascript:showCase(1)'>失败(0)</a>
-<a href='javascript:showCase(2)'>所有(60)</a>
+<a href='javascript:showCase(2)'>所有(89)</a>
 
 -->
 </p>
@@ -373,12 +373,12 @@ function showOutput(id, name) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_CN001_homepage.HOMEPAGE</td>
     <td>34</td>
-    <td>34</td>
+    <td>33</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td>
      <!--
         <button onclick="showClassDetail('c1',34)" class="btn btn-success" type="button" 
@@ -599,19 +599,50 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr id='pt1.15' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_014_TUMIUAT_1510_5</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt1.15' class="popup_window">
-      
+<tr id='ft1.15' class='none'>
+    <td class='errorCase'><div class='testcase'>test_014_TUMIUAT_1510_5</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.15')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft1.15')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.15: Traceback (most recent call last):
+  File "F:\Tuogo_Project\tumi\case\test_CN001_homepage.py", line 105, in test_014_TUMIUAT_1510_5
+    assert new_find_element(self.driver,homepage.accessories_title).text =='各类旅行配件、电子产品、钱包等'
+  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in new_find_element
+    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
+  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in &lt;lambda&gt;
+    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
+  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=87.0.4280.88)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt1.16' class='hiddenRow'>
@@ -1305,12 +1336,504 @@ function showOutput(id, name) {
     
 </tr>
 
+<tr class='errorClass'>
+    <td>test_CN003_product_list_page.Product_list</td>
+    <td>29</td>
+    <td>28</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+     <!--
+        <button onclick="showClassDetail('c3',29)" class="btn btn-success" type="button" 
+            >收起</button>
+       -->
+        <a href="javascript:showClassDetail('c3',29)">&nbsp;&nbsp;收起</a>
+        
+    </td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_058_TUMIUAT_449_1</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.1' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_059_TUMIUAT_449_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.2' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_060_TUMIUAT_449_3</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.3' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_061_TUMIUAT_449_4</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.4' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_062_TUMIUAT_449_5</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.5' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_063_TUMIUAT_450_1</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.6' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_064_TUMIUAT_450_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.7' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_065_TUMIUAT_450_3</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.8' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_066_TUMIUAT_450_4</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.9' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_067_TUMIUAT_451</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.10' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_068_TUMIUAT_452</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.11' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_069_TUMIUAT_453_1</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.12' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_070_TUMIUAT_453_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.13' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_071_TUMIUAT_453_3</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.14' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_072_TUMIUAT_454</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.15' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_073_TUMIUAT_456</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.16' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_074_TUMIUAT_457</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.17' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_075_TUMIUAT_459</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.18' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_076_TUMIUAT_460</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.19' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_077_TUMIUAT_461</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.20' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_078_TUMIUAT_462_1</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.21' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_079_TUMIUAT_462_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.22' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_080_TUMIUAT_462_3</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.23' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_081_TUMIUAT_463</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.24' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_082_TUMIUAT_471</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.25' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='ft3.26' class='none'>
+    <td class='errorCase'><div class='testcase'>test_083_TUMIUAT_472</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.26')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft3.26')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft3.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.26: Traceback (most recent call last):
+  File "F:\Tuogo_Project\tumi\case\test_CN003_product_list_page.py", line 254, in test_083_TUMIUAT_472
+    product_list1.click_s_compare()
+  File "F:\Tuogo_Project\tumi\PO\CN_003_product_list_page.py", line 170, in click_s_compare
+    self.click(self.s_compare)
+  File "F:\Tuogo_Project\tumi\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in new_find_element
+    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
+  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_084_TUMIUAT_474</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.27' class="popup_window">
+      
+    </div>
+    
+</tr>
+
+<tr id='pt3.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_085_TUMIUAT_1355_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.28')" >
+        通过</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_pt3.28')" 
+        type="button" >通过&bull;</button> 
+
+    <div id='div_pt3.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.28: 国际旅行前盖4轮登机箱
+国际旅行前盖4轮登机箱
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_086_TUMIUAT_1355_2</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
+    </td>
+    
+    
+    <div id='div_pt3.29' class="popup_window">
+      
+    </div>
+    
+</tr>
+
 <tr id='total_row'>
     <td>共</td>
-    <td>60</td>
-    <td>60</td>
+    <td>89</td>
+    <td>87</td>
     <td>0</td>
-    <td>0</td>
+    <td>2</td>
     <td>&nbsp;</td>
 </tr>
 </table>

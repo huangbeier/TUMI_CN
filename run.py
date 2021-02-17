@@ -7,7 +7,7 @@ from utils.ClassicHTMLTestRunner import HTMLTestRunner
 testcase = unittest.defaultTestLoader.discover('case','test_*.py')
 
 #自动运行case并生成报告 htmltestrunner
-filePath = r'D:\huang_Project\TUMI\report\report.html'
+filePath = r'F:\Tuogo_Project\tumi\report\report.html'
 #D:\huang_Project\TUMI\report\report.html
 #F:\Tuogo_Project\TUMI\report\report.html  家里
 #C:\huang111\TUMI\report\report.html   公司

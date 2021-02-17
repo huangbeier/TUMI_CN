@@ -8,6 +8,7 @@ from config import chromeDriver_Path,cn_url
 from utils.seleniumtools import new_find_element
 from CN_003_product_list_page import product_list
 from config import cn_url
+from CN_001_homepage import homepage
 
 class Product_list(unittest.TestCase):
     @classmethod
@@ -249,7 +250,7 @@ class Product_list(unittest.TestCase):
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
         product_list1.click_f_compare()
-        time.sleep(1)
+        time.sleep(3)
         product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         product_list1.click_continue_shopping()
