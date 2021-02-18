@@ -22,14 +22,6 @@ class Product_list(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.refresh()
         time.sleep(2)
-    # def tearDown(self):
-    #     homepage1 = homepage(self.driver)
-    #     my_account1 = my_account(self.driver)
-    #     time.sleep(2)
-    #     my_account1.move_to_logo()
-    #     my_account1.click_account_logo()
-    #     if new_find_element(self.driver,homepage.my_username).text != '登录/注册':
-    #         homepage1.sign_out()
 
     def test_058_TUMIUAT_449_1(self):
         product_list1=product_list(self.driver)
@@ -241,17 +233,17 @@ class Product_list(unittest.TestCase):
         assert new_find_element(self.driver,product_list.continue_shopping).text == '继续购物'
         assert new_find_element(self.driver,product_list.mailToLink).text == '邮件结果'
         assert new_find_element(self.driver,product_list.res).text == '打印结果'
-        product_list1.click_del_product()
-        product_list1.click_f_compare()
+        # product_list1.click_del_product()
+        # product_list1.click_f_compare()
 
 
     def test_083_TUMIUAT_472(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        product_list1.click_f_compare()
-        time.sleep(3)
-        product_list1.click_s_compare()
+        # product_list1.click_f_compare()
+        # time.sleep(3)
+        # product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         product_list1.click_continue_shopping()
         assert self.driver.current_url == cn_url
@@ -260,22 +252,16 @@ class Product_list(unittest.TestCase):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        # product_list1.click_f_compare()
-        # product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         product_list1.click_add_to_Cart()
         time.sleep(2)
         assert new_find_element(self.driver,product_list.gotocart).text == '前往购物车'
         self.driver.refresh()
-        # product_list1.click_del_product()
-        # product_list1.click_s_compare()
 
     def test_085_TUMIUAT_1355_1(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        # product_list1.click_f_compare()
-        # product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         a=new_find_element(self.driver,product_list.f_product_name).text
         print(a)
@@ -284,16 +270,11 @@ class Product_list(unittest.TestCase):
         time.sleep(2)
         print(new_find_element(self.driver,product_list.c_f_product_name).text)
         assert a == new_find_element(self.driver,product_list.c_f_product_name).text
-        # self.driver.refresh()
-        # product_list1.click_del_product()
-        # product_list1.click_s_compare()
 
     def test_086_TUMIUAT_1355_2(self):
         product_list1 = product_list(self.driver)
         product_list1.click_f_luggage()
         product_list1.click_s_luggage_buy()
-        # product_list1.click_f_compare()
-        # product_list1.click_s_compare()
         product_list1.click_immediately_to_compare()
         a=new_find_element(self.driver,product_list.f_product_name).text
         product_list1.click_cart_content()

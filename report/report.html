@@ -328,9 +328,9 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>TUMI</h1>
 <p class='attribute'><strong>测试人员:</strong> tester</p>
-<p class='attribute'><strong>开始时间:</strong> 2021-02-17 15:07:38</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:24:48.608704</p>
-<p class='attribute'><strong>测试结果:</strong> 通过 87 错误 2</p>
+<p class='attribute'><strong>开始时间:</strong> 2021-02-18 09:49:10</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:19:08.141280</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 88 错误 1</p>
 
 <p class='description'>TUMI</p>
 </div>
@@ -340,16 +340,16 @@ function showOutput(id, name) {
 <p id='show_detail_line'>
 
 
-<button class="btn btn-primary" onclick="#" type="button" >概要(97.75%)</button>
+<button class="btn btn-primary" onclick="#" type="button" >概要(98.88%)</button>
 
-<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(87)</button>
+<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(88)</button>
 
 <button class="btn btn-danger" onclick="showCase(1)" type="button" >失败(0)</button>
 
 <button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(89)</button>
 
 <!--
-<a href='javascript:showCase(0)'>通过(87)</a>
+<a href='javascript:showCase(0)'>通过(88)</a>
 <a href='javascript:showCase(1)'>失败(0)</a>
 <a href='javascript:showCase(2)'>所有(89)</a>
 
@@ -373,12 +373,12 @@ function showOutput(id, name) {
     <td>详细</td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>test_CN001_homepage.HOMEPAGE</td>
     <td>34</td>
-    <td>33</td>
+    <td>34</td>
     <td>0</td>
-    <td>1</td>
+    <td>0</td>
     <td>
      <!--
         <button onclick="showClassDetail('c1',34)" class="btn btn-success" type="button" 
@@ -599,50 +599,19 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr id='ft1.15' class='none'>
-    <td class='errorCase'><div class='testcase'>test_014_TUMIUAT_1510_5</div></td>
-    <td colspan='5' align='center'>
-
-    <!-- css div popup start -->
-    <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.15')" >
-        错误</a>
-    -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft1.15')" 
-        type="button" >错误&bull;</button> 
-
-    <div id='div_ft1.15' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.15').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.15: Traceback (most recent call last):
-  File "F:\Tuogo_Project\tumi\case\test_CN001_homepage.py", line 105, in test_014_TUMIUAT_1510_5
-    assert new_find_element(self.driver,homepage.accessories_title).text =='各类旅行配件、电子产品、钱包等'
-  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in new_find_element
-    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
-  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
-    value = method(self._driver)
-  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in &lt;lambda&gt;
-    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
-  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=87.0.4280.88)
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_014_TUMIUAT_1510_5</div></td>
+    
+    <td colspan='5' align='center'  >
+        <button class="popup_link btn_small btn-primary2" onclick="#" 
+            type="button" >通过&nbsp;</button> 
     </td>
+    
+    
+    <div id='div_pt1.15' class="popup_window">
+      
+    </div>
+    
 </tr>
 
 <tr id='pt1.16' class='hiddenRow'>
@@ -1747,15 +1716,15 @@ selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receivi
         <pre>
         
 ft3.26: Traceback (most recent call last):
-  File "F:\Tuogo_Project\tumi\case\test_CN003_product_list_page.py", line 254, in test_083_TUMIUAT_472
+  File "C:\huang111\TUMI\case\test_CN003_product_list_page.py", line 254, in test_083_TUMIUAT_472
     product_list1.click_s_compare()
-  File "F:\Tuogo_Project\tumi\PO\CN_003_product_list_page.py", line 170, in click_s_compare
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 170, in click_s_compare
     self.click(self.s_compare)
-  File "F:\Tuogo_Project\tumi\PO\base_page.py", line 16, in click
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
     new_find_element(self.driver,loc).click()
-  File "F:\Tuogo_Project\tumi\utils\seleniumtools.py", line 22, in new_find_element
+  File "C:\huang111\TUMI\utils\seleniumtools.py", line 22, in new_find_element
     return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
-  File "C:\Users\黄贝尔\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 
@@ -1831,9 +1800,9 @@ pt3.28: 国际旅行前盖4轮登机箱
 <tr id='total_row'>
     <td>共</td>
     <td>89</td>
-    <td>87</td>
+    <td>88</td>
     <td>0</td>
-    <td>2</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
