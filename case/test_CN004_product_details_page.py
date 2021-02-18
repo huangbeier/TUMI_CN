@@ -69,3 +69,61 @@ class Product_list(unittest.TestCase):
         time.sleep(2)
         assert new_find_element(self.driver,product_details_page.wechat_text).text == '微信扫一扫'
 
+    def test_092_TUMIUAT_495(self):
+        product_details_page1 = product_details_page(self.driver)
+        product_list1 = product_list(self.driver)
+        product_list1.click_f_luggage()
+        product_list1.click_s_luggage_buy()
+        product_list1.click_product_img()
+        product_details_page1.click_diy_add()
+        time.sleep(1)
+        product_details_page1.input_diy_firstNum()
+        product_details_page1.click_diy_default()
+        product_details_page1.click_diy_f_next()
+        product_details_page1.click_diy_s_next()
+        product_details_page1.click_diy_t_ok()
+        time.sleep(2)
+        assert new_find_element(self.driver,product_details_page.diy_edit).text == '编辑'
+        assert new_find_element(self.driver, product_details_page.diy_del).text == '移除'
+
+    def test_092_TUMIUAT_496(self):
+        product_details_page1 = product_details_page(self.driver)
+        product_list1 = product_list(self.driver)
+        product_list1.click_f_luggage()
+        product_list1.click_s_luggage_buy()
+        product_list1.click_product_img()
+        product_details_page1.click_diy_add()
+        time.sleep(1)
+        product_details_page1.input_diy_firstNum()
+        product_details_page1.click_diy_f_next()
+        product_details_page1.click_diy_s_next()
+        product_details_page1.click_diy_t_ok()
+        time.sleep(2)
+        product_details_page1.click_diy_edit()
+        time.sleep(1)
+        product_details_page1.clear_diy_firstNum()
+        product_details_page1.input_diy_firstNum2()
+        product_details_page1.click_diy_f_next()
+        product_details_page1.click_diy_s_next()
+        product_details_page1.click_diy_t_ok()
+        time.sleep(2)
+        assert new_find_element(self.driver,product_details_page.diy_edit).text == '编辑'
+        assert new_find_element(self.driver, product_details_page.diy_del).text == '移除'
+
+    def test_093_TUMIUAT_497(self):
+        product_details_page1 = product_details_page(self.driver)
+        product_list1 = product_list(self.driver)
+        product_list1.click_f_luggage()
+        product_list1.click_s_luggage_buy()
+        product_list1.click_product_img()
+        product_details_page1.click_diy_add()
+        time.sleep(1)
+        product_details_page1.input_diy_firstNum()
+        product_details_page1.click_diy_f_next()
+        product_details_page1.click_diy_s_next()
+        product_details_page1.click_diy_t_ok()
+        time.sleep(2)
+        product_details_page1.click_diy_del()
+        time.sleep(2)
+        assert new_find_element(self.driver,product_details_page.diy_add).text == '现在添加'
+
