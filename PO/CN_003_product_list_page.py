@@ -63,7 +63,7 @@ class product_list(page):
     # 二级页面-筛选-专属功能
     screening_function = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[6]/h4[1]/a[1]')
     # 二级页面-筛选-电脑尺寸
-    screening_size = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[7]/h4[1]/a[1]')
+    screening_size = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[6]/h4[1]/a[1]')
     # 二级页面-筛选-产品类型
     screening_type = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[8]/h4[1]/a[1]')
     # 二级页面-筛选-行李箱尺寸
@@ -73,9 +73,9 @@ class product_list(page):
     #二级页面-系列筛选
     screening_series_btn=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/h4[1]/a[1]')
     #二级页面-merga系列
-    merge_serise=('id','facet-:relevance:collection:Merge')
+    merge_serise=('xpath','/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[6]/form[1]/input[3]')
     #二级页面-merga系列数量
-    merga_num=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[5]/form[1]/label[1]/span[1]/span[1]')
+    merga_num=('xpath','/html[1]/body[1]/div[1]/main[1]/div[4]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[6]/form[1]/label[1]/span[1]/span[1]')
     #二级页面-被筛选出的产品数量
     mergaNum = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/span[1]/span[1]')
     #二级页面-顶部筛选框
@@ -85,7 +85,7 @@ class product_list(page):
     # 二级页面-价格从高到低
     price_desc=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/span[1]/ul[1]/li[5]/a[1]')
     #二级页面-筛选-最低价格的产品价格
-    lowest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]')
+    lowest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/span[1]')
     # 二级页面-筛选-最高价格的产品价格
     highest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]')
     #二级分类-商品标签
@@ -97,7 +97,7 @@ class product_list(page):
     # 二级分类-分页框-所有
     page_all=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/span[2]/ul[1]/li[3]/a[1]')
     #二级分类-快速购买
-    buy_now=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[5]/a[1]')
+    buy_now=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[4]/a[1]')
     #二级分类-产品名
     product_name = ('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/div[1]')
     #二级分类-快速购买-产品名
@@ -232,4 +232,7 @@ class product_list(page):
 
     def click_cart_content(self):
         self.click(self.cart_content)
+
+    # def get_assent_text(self,loc):
+    #     self.get_text(loc)
 

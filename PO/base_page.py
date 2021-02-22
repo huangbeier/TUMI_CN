@@ -27,3 +27,6 @@ class page(object):
     def clear_loc(self,loc):#清空输入框
         new_find_element(self.driver, loc).clear()
 
+    # def get_text(self,loc):#获取隐藏文本
+    #     new_find_element(self.driver, loc).get_attribute('textContent')
+

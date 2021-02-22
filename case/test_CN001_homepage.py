@@ -31,7 +31,7 @@ class HOMEPAGE(unittest.TestCase):
     def test_002_TUMIUAT_408_2(self):
         homepage1 = homepage(self.driver)
         homepage1.click_vip_club()
-        assert self.driver.current_url == 'https://www.tumi.cn/tumi-club/'
+        assert self.driver.current_url == f'{cn_url}tumi-club/'
         assert new_find_element(self.driver,homepage.vip_Privilege).text == '会员专属礼遇'
 
     def test_003_TUMIUAT_408_3(self):
@@ -42,7 +42,7 @@ class HOMEPAGE(unittest.TestCase):
     def test_004_TUMIUAT_408_4(self):
         homepage1 = homepage(self.driver)
         homepage1.click_offline_store()
-        assert self.driver.current_url == 'https://www.tumi.cn/store-locator/'
+        assert self.driver.current_url == f'{cn_url}store-locator/'
         assert new_find_element(self.driver,homepage.store_type).text == '门店类型'
 
     def test_005_TUMIUAT_408_5(self):
@@ -114,21 +114,21 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_title()
         homepage1.new_page()
-        assert new_find_element(self.driver,homepage.alpha3_title).text =='全新TUMI Alpha 3系列'
+        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
 
     def test_017_TUMIUAT_417_2(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_img()
         homepage1.new_page()
-        assert new_find_element(self.driver,homepage.alpha3_title).text =='全新TUMI Alpha 3系列'
+        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
 
     def test_018_TUMIUAT_417_3(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_explore()
         homepage1.new_page()
-        assert new_find_element(self.driver,homepage.alpha3_title).text =='全新TUMI Alpha 3系列'
+        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
 
     def test_019_TUMIUAT_417_4(self):
         homepage1 = homepage(self.driver)
@@ -209,6 +209,7 @@ class HOMEPAGE(unittest.TestCase):
         homepage1 = homepage(self.driver)
         homepage1.login()
         homepage1.click_cart()
+        time.sleep(1)
         assert self.driver.current_url == cn_cart
         homepage1.sign_out()
 
