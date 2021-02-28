@@ -1,2 +1,2 @@
-# TUMI_CN
+# TUMI
 自动化脚本
