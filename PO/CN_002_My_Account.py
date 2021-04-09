@@ -170,6 +170,7 @@ class my_account(page):
         self.input_text(self.account_email,text='testtest@qq.com')
 
     def click_account_save_btn(self):
+        self.roll_to_element(500)
         self.click(self.account_save_btn)
 
     def click_call_null(self):
