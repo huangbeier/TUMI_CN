@@ -328,9 +328,9 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>TUMI</h1>
 <p class='attribute'><strong>测试人员:</strong> tester</p>
-<p class='attribute'><strong>开始时间:</strong> 2021-02-22 13:53:06</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:20:00.216269</p>
-<p class='attribute'><strong>测试结果:</strong> 通过 96 失败 1</p>
+<p class='attribute'><strong>开始时间:</strong> 2021-04-09 14:56:48</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:16:31.796963</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 87 失败 1 错误 9</p>
 
 <p class='description'>TUMI</p>
 </div>
@@ -340,16 +340,16 @@ function showOutput(id, name) {
 <p id='show_detail_line'>
 
 
-<button class="btn btn-primary" onclick="#" type="button" >概要(98.97%)</button>
+<button class="btn btn-primary" onclick="#" type="button" >概要(89.69%)</button>
 
-<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(96)</button>
+<button class="btn btn-success" onclick="showCase(0)" type="button" >通过(87)</button>
 
 <button class="btn btn-danger" onclick="showCase(1)" type="button" >失败(1)</button>
 
 <button class="btn btn-primary2" onclick="showCase(2)" type="button" >所有(97)</button>
 
 <!--
-<a href='javascript:showCase(0)'>通过(96)</a>
+<a href='javascript:showCase(0)'>通过(87)</a>
 <a href='javascript:showCase(1)'>失败(1)</a>
 <a href='javascript:showCase(2)'>所有(97)</a>
 
@@ -1305,12 +1305,12 @@ function showOutput(id, name) {
     
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>test_CN003_product_list_page.Product_list</td>
     <td>29</td>
-    <td>28</td>
+    <td>27</td>
     <td>1</td>
-    <td>0</td>
+    <td>1</td>
     <td>
      <!--
         <button onclick="showClassDetail('c3',29)" class="btn btn-success" type="button" 
@@ -1551,8 +1551,8 @@ function showOutput(id, name) {
         <pre>
         
 ft3.15: Traceback (most recent call last):
-  File "C:\huang111\TUMI\case\test_CN003_product_list_page.py", line 137, in test_072_TUMIUAT_454
-    assert new_find_element(self.driver, product_list.screening_size).text == '电脑尺寸'
+  File "C:\huang111\TUMI\case\test_CN003_product_list_page.py", line 138, in test_072_TUMIUAT_454
+    assert new_find_element(self.driver, product_list.screening_type).text == '产品类型'
 AssertionError
 
 
@@ -1743,26 +1743,43 @@ AssertionError
     
 </tr>
 
-<tr id='pt3.28' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_085_TUMIUAT_1355_1</div></td>
+<tr id='ft3.28' class='none'>
+    <td class='errorCase'><div class='testcase'>test_085_TUMIUAT_1355_1</div></td>
     <td colspan='5' align='center'>
 
     <!-- css div popup start -->
     <!--
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.28')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.28')" >
+        错误</a>
     -->
-     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_pt3.28')" 
-        type="button" >通过&bull;</button> 
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft3.28')" 
+        type="button" >错误&bull;</button> 
 
-    <div id='div_pt3.28' class="popup_window">
+    <div id='div_ft3.28' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.28').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.28').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt3.28: 洲际双重拉链开口四轮登机箱
+ft3.28: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN003_product_list_page.py", line 268, in test_085_TUMIUAT_1355_1
+    product_list1.click_gotocart()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 229, in click_gotocart
+    self.click(self.gotocart)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.90)
+
 
 
         </pre>
@@ -1787,12 +1804,12 @@ pt3.28: 洲际双重拉链开口四轮登机箱
     
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_CN004_product_details_page.Product_list</td>
     <td>8</td>
+    <td>0</td>
+    <td>0</td>
     <td>8</td>
-    <td>0</td>
-    <td>0</td>
     <td>
      <!--
         <button onclick="showClassDetail('c4',8)" class="btn btn-success" type="button" 
@@ -1803,132 +1820,380 @@ pt3.28: 洲际双重拉链开口四轮登机箱
     </td>
 </tr>
 
-<tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_087_TUMIUAT_479_1</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.1' class="popup_window">
-      
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_087_TUMIUAT_479_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.1')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 31, in test_087_TUMIUAT_479_1
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_088_TUMIUAT_479_2</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.2' class="popup_window">
-      
+<tr id='ft4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_088_TUMIUAT_479_2</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.2')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 40, in test_088_TUMIUAT_479_2
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_089_TUMIUAT_479_3</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.3' class="popup_window">
-      
+<tr id='ft4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_089_TUMIUAT_479_3</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.3')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.3: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 49, in test_089_TUMIUAT_479_3
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_090_TUMIUAT_490</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.4' class="popup_window">
-      
+<tr id='ft4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_090_TUMIUAT_490</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.4')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.4: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 58, in test_090_TUMIUAT_490
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_091_TUMIUAT_491</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.5' class="popup_window">
-      
+<tr id='ft4.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_091_TUMIUAT_491</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.5')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.5: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 67, in test_091_TUMIUAT_491
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_092_TUMIUAT_495</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.6' class="popup_window">
-      
+<tr id='ft4.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_092_TUMIUAT_495</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.6')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.6')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.6: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 77, in test_092_TUMIUAT_495
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.7' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_092_TUMIUAT_496</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.7' class="popup_window">
-      
+<tr id='ft4.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_092_TUMIUAT_496</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.7')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.7')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.7: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 93, in test_092_TUMIUAT_496
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt4.8' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_093_TUMIUAT_497</div></td>
-    
-    <td colspan='5' align='center'  >
-        <button class="popup_link btn_small btn-primary2" onclick="#" 
-            type="button" >通过&nbsp;</button> 
-    </td>
-    
-    
-    <div id='div_pt4.8' class="popup_window">
-      
+<tr id='ft4.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_093_TUMIUAT_497</div></td>
+    <td colspan='5' align='center'>
+
+    <!-- css div popup start -->
+    <!--
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.8')" >
+        错误</a>
+    -->
+     <button class="popup_link btn_small btn-primary2" onclick="showTestDetail('div_ft4.8')" 
+        type="button" >错误&bull;</button> 
+
+    <div id='div_ft4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.8: Traceback (most recent call last):
+  File "C:\huang111\TUMI\case\test_CN004_product_details_page.py", line 117, in test_093_TUMIUAT_497
+    product_list1.click_product_img()
+  File "C:\huang111\TUMI\PO\CN_003_product_list_page.py", line 216, in click_product_img
+    self.click(self.product_img)
+  File "C:\huang111\TUMI\PO\base_page.py", line 16, in click
+    new_find_element(self.driver,loc).click()
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\huang\AppData\Local\Programs\Python\Python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;img class="prod-img main-img lazy" title="Alpha  3 洲际双重拉链开口四轮登机箱" data-original="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" data-src_small="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=170&amp;amp;wid=170&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_medium="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" data-src_large="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=330&amp;amp;wid=330&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0" alt="洲际双重拉链开口四轮登机箱 Alpha  3" src="http://tumi.scene7.com/is/image/Tumi/1356011164_main?hei=280&amp;amp;wid=280&amp;amp;layer=2&amp;amp;opac=0&amp;amp;layer=3&amp;amp;opac=0&amp;amp;fmt=png-alpha" style=""&gt; is not clickable at point (791, 553). Other element would receive the click: &lt;div class="dark-overlay"&gt;&lt;/div&gt;
+  (Session info: chrome=89.0.4389.90)
+
+
+
+        </pre>
     </div>
-    
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>共</td>
     <td>97</td>
-    <td>96</td>
+    <td>87</td>
     <td>1</td>
-    <td>0</td>
+    <td>9</td>
     <td>&nbsp;</td>
 </tr>
 </table>

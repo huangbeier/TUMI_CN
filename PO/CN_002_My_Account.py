@@ -207,6 +207,7 @@ class my_account(page):
         self.input_text(self.address_Detailed,text='测试地址')
 
     def click_address_save(self):
+        self.roll_to_element(500)
         self.click(self.address_save)
 
     def click_address_edit(self):
