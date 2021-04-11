@@ -85,9 +85,9 @@ class product_list(page):
     # 二级页面-价格从高到低
     price_desc=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/span[1]/ul[1]/li[5]/a[1]')
     #二级页面-筛选-最低价格的产品价格
-    lowest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[3]/span[1]')
+    lowest_price=('xpath','/html/body/div[1]/main/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div[3]/span')
     # 二级页面-筛选-最高价格的产品价格
-    highest_price=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]')
+    highest_price=('xpath','/html/body/div[1]/main/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div[3]/span')
     #二级分类-商品标签
     product_label=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]')
     #二级分类-分页框
@@ -103,7 +103,7 @@ class product_list(page):
     #二级分类-快速购买-产品名
     b_product_name=('xpath','/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]')
     #二级分类-第一件商品的图片
-    product_img=('xpath','//body/div[1]/main[1]/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/a[1]/span[1]/div[1]')
+    product_img=('xpath','/html/body/div[1]/main/div[4]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div[2]')
     #比较页-继续购物
     continue_shopping = ('xpath','//body/div[1]/main[1]/div[2]/div[2]/div[1]/a[1]')
     #比较页-邮件结果
@@ -160,6 +160,7 @@ class product_list(page):
         self.click(self.f_recommended)
 
     def click_s_luggage_buy(self):
+        self.roll_to_element(500)
         self.click(self.s_luggage_buy)
         time.sleep(5)
 

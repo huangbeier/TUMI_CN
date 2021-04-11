@@ -164,7 +164,7 @@ class Product_list(unittest.TestCase):
         product_list1.click_sortOptions1SelectBoxItText()
         product_list1.click_price_asc()
         time.sleep(5)
-        assert new_find_element(self.driver,product_list.lowest_price).get_attribute('textContent') == '¥0.01'
+        assert new_find_element(self.driver,product_list.lowest_price).text == '¥0.01'
 
     def test_076_TUMIUAT_460(self):
         product_list1 = product_list(self.driver)
@@ -173,7 +173,7 @@ class Product_list(unittest.TestCase):
         product_list1.click_sortOptions1SelectBoxItText()
         product_list1.click_price_desc()
         time.sleep(1)
-        assert new_find_element(self.driver,product_list.highest_price).get_attribute('textContent') == '¥14,990.00'
+        assert new_find_element(self.driver,product_list.highest_price).text == '¥14,990.00'
 
     def test_077_TUMIUAT_461(self):
         product_list1 = product_list(self.driver)

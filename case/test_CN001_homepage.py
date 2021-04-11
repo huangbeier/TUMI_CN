@@ -114,21 +114,24 @@ class HOMEPAGE(unittest.TestCase):
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_title()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi.cn/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_017_TUMIUAT_417_2(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_img()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi.cn/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_018_TUMIUAT_417_3(self):
         homepage1 = homepage(self.driver)
         homepage1.roll_to_bottom_AD_space()
         homepage1.click_bottom_AD_space_explore()
         homepage1.new_page()
-        assert self.driver.current_url == 'https://www.tumi.cn/alpha3/'
+        time.sleep(2)
+        assert self.driver.current_url == 'https://stage.tumi.cn/c-collections/alpha3/?q=:relevance&pageSize=30&page=0&sort=relevance'
 
     def test_019_TUMIUAT_417_4(self):
         homepage1 = homepage(self.driver)
