@@ -1,6 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 
-def new_find_element(driver, locator, timeout=30):
+def new_find_element(driver, locator):
     """
         方法名：动态查找元素:显式等待
         参数：
@@ -19,4 +19,7 @@ def new_find_element(driver, locator, timeout=30):
             - 找到元素：返回元素
             - 没找到元素：直接报错
     """
-    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
+    try:
+        return WebDriverWait(driver, 30).until(lambda s: s.find_element(*locator))
+    except Exception as e:
+        raise e
