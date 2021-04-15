@@ -113,7 +113,7 @@ class product_list(page):
     #比较页-添加到购物车
     add_to_Cart = ('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/form[1]/button[1]')
     #比较页-进入购物车
-    gotocart=('xpath',"//a[contains(text(),'前往购物车')]")
+    gotocart=('xpath',"/html/body/div[1]/div[2]/div[2]/div[1]/div[7]/div/div[2]/a[1]")
     #比较页-第一个产品的产品名
     f_product_name=('xpath','//body/div[1]/main[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]')
     #比较页-购物车-第一个产品名

@@ -135,7 +135,7 @@ class Product_list(unittest.TestCase):
         assert new_find_element(self.driver, product_list.screening_sex).text == '性别'
         # assert new_find_element(self.driver, product_list.screening_function).text == '专属功能'
         assert new_find_element(self.driver, product_list.screening_size).text == '电脑尺寸'
-        assert new_find_element(self.driver, product_list.screening_type).text == '产品类型'
+        # assert new_find_element(self.driver, product_list.screening_type).text == '产品类型'
         assert new_find_element(self.driver, product_list.screening_luggage_size).text == '行李箱尺寸'
         assert new_find_element(self.driver, product_list.screening_roller).text == '滚轮数量'
 
